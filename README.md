@@ -20,6 +20,12 @@ Right now the smart contracts run directly on Ethereum blockchain.The project's 
 
 __Warning__: You should have metamask wallet (download the extension) to run this app. After creating your account switch to the ropsten test network and request some test ethers from https://faucet.metamask.io/ to get going.
 
+![etherbank main page](https://user-images.githubusercontent.com/60546202/149648909-492d54da-78a8-45d0-8c1d-b2908fc1115f.jpg)
+![borrow](https://user-images.githubusercontent.com/60546202/149648907-386ca2e3-bf11-4013-b0ad-444cb3a1b179.jpg)
+![deposit](https://user-images.githubusercontent.com/60546202/149648908-0ff52941-6544-4bc0-ab5f-305f5c503ab5.jpg)
+
+
+
 ## Compile and Migrate Smart Contracts
 
 First, make sure you are running a local ERC20 blockchain, for example [Ganache](https://www.trufflesuite.com/ganache).
