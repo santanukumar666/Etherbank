@@ -2,7 +2,7 @@ import { Tabs, Tab } from 'react-bootstrap'
 import dBank from '../abis/dBank.json'
 import React, { Component } from 'react';
 import Token from '../abis/Token.json'
-import dbank from '../dbank.png';
+import etherbank from '../logo.jpg';
 import Web3 from 'web3';
 import './App.css';
 
@@ -28,6 +28,7 @@ class App extends Component {
 
       //load contracts
       try {
+        
         const token = new web3.eth.Contract(Token.abi, Token.networks[netId].address)
         const dbank = new web3.eth.Contract(dBank.abi, dBank.networks[netId].address)
         const dBankAddress = dBank.networks[netId].address
@@ -104,18 +105,18 @@ class App extends Component {
       <div className='text-monospace'>
         <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
           <a
-            className="navbar-brand col-sm-3 col-md-2 mr-0"
-            href="http://www.dappuniversity.com/bootcamp"
+            className="navbar-brand col-sm-4 col-md-3 mr-0"
+            href="https://santanukumar.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
-        <img src={dbank} className="App-logo" alt="logo" height="32"/>
-          <b>d₿ank</b>
+        <img src={etherbank} className="App-logo" alt="logo" height="40"/>
+          <b>Ether₿ank</b>
         </a>
         </nav>
         <div className="container-fluid mt-5 text-center">
         <br></br>
-          <h1>Welcome to d₿ank</h1>
+          <h1>Welcome to Ether₿ank</h1>
           <h2>{this.state.account}</h2>
           <br></br>
           <div className="row">
@@ -148,7 +149,7 @@ class App extends Component {
                           placeholder='amount...'
                           required />
                       </div>
-                      <button type='submit' className='btn btn-primary'>DEPOSIT</button>
+                      <button type='submit' className='btn btn-outline-success'>DEPOSIT</button>
                     </form>
 
                   </div>
@@ -159,7 +160,7 @@ class App extends Component {
                     <br></br>
                     <br></br>
                   <div>
-                    <button type='submit' className='btn btn-primary' onClick={(e) => this.withdraw(e)}>WITHDRAW</button>
+                    <button type='submit' className='btn btn-outline-warning' onClick={(e) => this.withdraw(e)}>WITHDRAW</button>
                   </div>
                 </Tab>
                 <Tab eventKey="borrow" title="Borrow">
@@ -190,7 +191,7 @@ class App extends Component {
                           placeholder='amount...'
                           required />
                       </div>
-                      <button type='submit' className='btn btn-primary'>BORROW</button>
+                      <button type='submit' className='btn btn-outline-danger'>BORROW</button>
                     </form>
                   </div>
                 </Tab>
@@ -203,7 +204,7 @@ class App extends Component {
                     (You'll receive your collateral - fee)
                     <br></br>
                     <br></br>
-                    <button type='submit' className='btn btn-primary' onClick={(e) => this.payOff(e)}>PAYOFF</button>
+                    <button type='submit' className='btn btn-outline-info' onClick={(e) => this.payOff(e)}>PAYOFF</button>
                   </div>
                 </Tab>
               </Tabs>
