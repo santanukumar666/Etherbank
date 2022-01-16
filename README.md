@@ -52,7 +52,7 @@ Visit http://localhost:3000
 ## Connect Metamask to one of the Ganache Accounts
 
 - Make sure you are running Ganache. Then pick the first account and copy its private key.
-- Go to http://localhost:4200
+- Go to http://localhost:3000
 - On Metamask, add a new Network, with the URL http://localhost, appropriate as port and chain ID. Use this network for development.
 - Also in Metamask import an account -> specify the private key you copied from the Ganache first account. __Warning__: do not use this account as a real account.
 - Reload the webapp. 
